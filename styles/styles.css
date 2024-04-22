@@ -44,10 +44,66 @@ body {
 }
 
 /* Custom Properties */
+:root {
+    /* Image Sidebar */
+    --logo-bg-color: rgb(0, 0, 0, 0.4);
+    --logo-font-size: 6rem;
 
+    /* Form content */
+    --form-text-height: 20rem;
+}
 
 /* Main Styles */
+body, #form-container {
+    display: flex;
+}
+
+/* Image sidebar styles */
+#image-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+#logo-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--logo-bg-color);
+    padding: 1rem 0;
+    margin-top: 10rem;
+}
+
 #logo-text {
     font-family: 'norse-bold', sans-serif;
-    font-size: 4rem;
+    font-size: var(--logo-font-size);
+    color: white;
 }
+
+#image-bg {
+    height: 100vh;
+    width: auto;
+}
+
+#image-credits {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+}
+
+#image-credits a {
+    color: white;
+}
+
+/* Form content styles */
+#form-container {
+    flex-direction: column;
+}
+
+#form-text {
+    height: var(--form-text-height);
+}
+
