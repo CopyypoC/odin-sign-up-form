@@ -52,6 +52,8 @@ body {
     /* Form content */
     --form-container-bg: rgb(248, 249, 251);
     --form-left-align: 2.5rem;
+    --subtle-shadow: 5px 5px 3px rgb(0, 0, 0, 0.1);
+    --input-border-color: #E5E7EB;
 }
 
 /* Main Styles */
@@ -119,7 +121,7 @@ form {
     padding: 1.8rem 7rem;
     padding-left: var(--form-left-align);
     background-color: white;
-    box-shadow: 5px 5px 3px rgb(0, 0, 0, 0.1);
+    box-shadow: var(--subtle-shadow);
     width: 100%;
 }
 
@@ -130,12 +132,31 @@ form ul {
     flex-wrap: wrap;
 }
 
-form input {
-    width: 35ch;
-    border: 2px solid #E5E7EB;
-    border-radius: 5px;
+.required-form::before {
+    content: '*';
+    color: red;
 }
 
+form input {
+    width: 35ch;
+    border: 2px solid var(--input-border-color);
+    border-radius: 5px;
+    outline: none;
+    padding: .25rem;
+}
+
+form input:invalid {
+    border-color: red;
+}
+
+form input:placeholder-shown{
+    border-color: var(--input-border-color);
+}
+
+form input:focus {
+    border-color: lightblue;
+    box-shadow: var(--subtle-shadow);
+}
 form #cta {
     font-size: 1.5rem;
     font-weight: 600;
@@ -162,6 +183,11 @@ form #cta {
     padding: .75rem 3rem;
     color: white;
     font-weight: bold;
+}
+
+#submit-container button:hover {
+    cursor: pointer;
+    filter: brightness(110%);
 }
 
 #submit-container p {
