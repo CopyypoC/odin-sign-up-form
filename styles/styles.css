@@ -50,7 +50,8 @@ body {
     --logo-font-size: 6rem;
 
     /* Form content */
-    --form-text-height: 20rem;
+    --form-container-bg: rgb(248, 249, 251);
+    --form-left-align: 2.5rem;
 }
 
 /* Main Styles */
@@ -100,10 +101,73 @@ body, #form-container {
 
 /* Form content styles */
 #form-container {
+    background-color: var(--form-container-bg);
     flex-direction: column;
 }
 
 #form-text {
-    height: var(--form-text-height);
+    padding: 7rem 8rem 3rem var(--form-left-align);
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
+#form-text #end {
+    padding-top: 1rem;
+}
+
+form {
+    padding: 1.8rem 7rem;
+    padding-left: var(--form-left-align);
+    background-color: white;
+    box-shadow: 5px 5px 3px rgb(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+form ul {
+    width: 100%;
+    display: flex;
+    gap: 1.5rem 4rem;
+    flex-wrap: wrap;
+}
+
+form input {
+    width: 35ch;
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+form #cta {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 1px;
+    margin: 0 auto;
+    flex: 1 1 45%;
+}
+
+#submit-container {
+    padding-left: var(--form-left-align);
+}
+
+#submit-container button {
+    margin-top: 2rem;
+    background-color: #596D48;
+    border: 0;
+    border-radius: 5px;
+    padding: .75rem 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+#submit-container p {
+    margin-top: 2rem;
+}
+
+#submit-container p a {
+    color: #596D48;
+}
