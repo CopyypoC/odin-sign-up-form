@@ -84,6 +84,10 @@ body, #form-container {
     color: white;
 }
 
+.bg-container {
+    position: relative;
+}
+
 #image-bg {
     height: 100vh;
     width: auto;
