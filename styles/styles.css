@@ -76,6 +76,7 @@ body, #form-container {
     background-color: var(--logo-bg-color);
     padding: 1rem 0;
     margin-top: 10rem;
+    z-index: 2;
 }
 
 #logo-text {
@@ -86,6 +87,7 @@ body, #form-container {
 
 .bg-container {
     position: relative;
+    z-index: 1;
 }
 
 #image-bg {
